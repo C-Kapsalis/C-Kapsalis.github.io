@@ -1,7 +1,7 @@
 Christoforos Kapsalis
 =====================
 
-**Marketing Engineer and Technical Writer**
+**Marketing Engineer · I turn technical products into things people can use**
 
 I grew up in Agrinio, a small agricultural town in western Greece, where I
 spent more hours on a mountain bike than anywhere else. Like most kids from the
@@ -36,25 +36,27 @@ each other. They both sit on top of something older and simpler: a passion for
 helping people do their best with the means they have. In my work, those
 means are the software tools in front of them.
 
-Once I saw it that way, I started looking for the work that lived at exactly
-that point, and I kept arriving at the same title: technical writer. It fit
-uncomfortably well. At my company documentation barely existed. Our offering
-was Power BI reports over a semantic model, and later a conversational layer on
-top, and in that world documentation is usually an afterthought. But I could
-watch marketers open our tools and get nothing out of them, not because the
-tools were weak but because no one had helped them across. So I started writing
-documentation on my own, part-time, from Syracuse. I got some things right and
-plenty wrong, all on instinct, until I came across the `Diátaxis framework
-<https://diataxis.fr>`_, created by Daniele Procida at Canonical, and my instinct
-finally had a name and a shape.
+Once I saw it that way, the work in front of me changed. At my company
+documentation barely existed. Our offering was Power BI reports over a
+semantic model, and later a conversational layer on top, and in that world
+documentation is usually an afterthought. But I could watch marketers open
+our tools and get nothing out of them, not because the tools were weak but
+because no one had helped them across. So I started writing documentation
+on my own, part-time, from Syracuse. I got some things right and plenty
+wrong, all on instinct, until I came across the `Diátaxis framework
+<https://diataxis.fr>`_, created by Daniele Procida at Canonical, and my
+instinct finally had a name and a shape.
 
 Seven years of an unlikely academic path (economics, then data science, then
 marketing) turn out to have been pointing at one thing all along. Economics
 taught me to approach a problem whole, and in a structured way. Data science
 taught me to read and test code, and to speak with the people who build it.
 Marketing taught me to stand in someone else's shoes and start from what they
-need. Technical writing is where all three finally do the same job at once:
-helping people do their best with the tools they have.
+need. The work I want is where all three do the same job at once: helping
+people do their best with the tools in front of them. Sometimes that work is
+called documentation, sometimes product marketing, sometimes enablement —
+the reader-first discipline underneath is the same, and it is the only job
+I have ever really had.
 
 ----
 

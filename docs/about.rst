@@ -1,13 +1,15 @@
 About
 =====
 
-I am a technical writer whose home turf is **marketing analytics and
-machine-learning products**. I document the kind of software I came up building
-and using. My background is an unusual blend of three degrees, and each left me
-with something I use every day: a BSc in Economics (Athens University of
-Economics and Business), an MSc in Data Science (American College of Greece),
-and an MSc in Marketing (Syracuse University, as a Fulbright scholar and Beta
-Gamma Sigma inductee).
+I work the seam where technical products meet the people who need them: the
+documentation that teaches them, the positioning that reaches them, and the
+analytics that prove what worked. My home turf is **marketing analytics and
+machine-learning products** — I write about the kind of software I came up
+building and using. My background is an unusual blend of three degrees, and
+each left me with something I use every day: a BSc in Economics (Athens
+University of Economics and Business), an MSc in Data Science (American
+College of Greece), and an MSc in Marketing (Syracuse University, as a
+Fulbright scholar and Beta Gamma Sigma inductee).
 
 Economics taught me to approach a problem whole, in a structured way. Data
 science taught me to read, test and reason about code, and to speak with the
