@@ -1,13 +1,6 @@
 Open-source contributions
 =========================
 
-**Diátaxis: documentation typo fix.** A small fix to the documentation of the
-Diátaxis framework itself, the very framework I use to structure my own
-documentation. Modest in size, but it took me through the project's
-contribution workflow end to end and, more usefully, made me read the source
-material closely.
-`Pull request #164 <https://github.com/evildmp/diataxis-documentation-framework/pull/164>`_.
-
 **Canonical robotics documentation: making labels carry meaning.**
 Canonical's robotics documentation site is split into four kinds of content:
 tutorials, how-to guides, explanations, and reference material. I made two
@@ -34,6 +27,13 @@ distinction existed, and where it didn't, mattered as much as inventing the
 names themselves.
 `Pull request #140 <https://github.com/canonical/robotics_documentation/pull/140>`_
 and `pull request #142 <https://github.com/canonical/robotics_documentation/pull/142>`_.
+
+**Diátaxis: documentation typo fix.** A small fix to the documentation of the
+Diátaxis framework itself, the very framework I use to structure my own
+documentation. Modest in size, but it took me through the project's
+contribution workflow end to end and, more usefully, made me read the source
+material closely.
+`Pull request #164 <https://github.com/evildmp/diataxis-documentation-framework/pull/164>`_.
 
 *Next: more from the Open Documentation Academy, and open-source projects in
 my own domain, such as* `PyMC-Marketing <https://www.pymc-marketing.io/>`__.
