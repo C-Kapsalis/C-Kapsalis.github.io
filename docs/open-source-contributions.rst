@@ -35,5 +35,7 @@ contribution workflow end to end and, more usefully, made me read the source
 material closely.
 `Pull request #164 <https://github.com/evildmp/diataxis-documentation-framework/pull/164>`_.
 
-*Next: more from the Open Documentation Academy, and open-source projects in
-my own domain, such as* `PyMC-Marketing <https://www.pymc-marketing.io/>`__.
+*Next: documentation and internationalization contributions to*
+`Data Formulator <https://github.com/microsoft/data-formulator>`__, `Flint
+<https://github.com/microsoft/flint-chart>`__, *and*
+`JASP <https://jasp-stats.org/>`__.
