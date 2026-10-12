@@ -74,14 +74,58 @@ layout. Validation is not self-attested: every generated model is gated by
 :doc:`tmdl-preflight <tmdl-preflight>`, and nothing is called "openable" until
 ``tmdl-preflight check`` reports **0 errors**.
 
+Openable is not the same as correct
+-----------------------------------
+
+Passing tmdl-preflight proves a model will open. It says nothing about
+whether the numbers are right, and a mock-up that opens with wrong numbers
+is worse than one that doesn't open, because people believe it. Version
+1.1.0 encodes the modeling knowledge that closes that gap, so generated
+models are *born compliant*.
+
+The clearest example was in the project's own hospital model. Its "average
+billed per patient" counted patients from the Patients table instead of
+from the encounters themselves. Department filters never reach the Patients
+table, so every department divided its revenue by all six patients:
+Cardiology showed $18,300 when the right answer was $36,600. The model
+opened, preflight passed, and only the grand total was correct. The fix was
+one line, but the lesson became a rule: a ratio is only valid at a grain
+where its numerator and denominator are both filtered.
+
+That rule is one of 22 in a new ``pbip-forge check`` command, which judges
+the spec, sample rows included, before any file is written:
+
+- **Keys and integrity:** every dimension has one unique, non-null key;
+  every fact row's foreign key exists in its dimension (with an "Unknown"
+  member suggested instead of a null); keys on both ends share a type and a
+  name.
+- **Star-schema shape:** every fact has an active link to the calendar,
+  every dimension filters at least one fact, no bidirectional filters, one
+  active path between any two tables, no cycles.
+- **DAX and grain:** every table, column, and measure a measure references
+  exists; every fact is actually read by a measure; ratios respect grain.
+- **The hand-off surface:** every visible measure has a format string, a
+  real description, a display folder, and a name whose suffix agrees with
+  its format (``Patients #``, ``No-Show %``).
+
+Two strictness profiles keep the bar honest: ``mockup`` lets a stakeholder
+iterate freely, ``handoff`` is what the data team receives. Builds are now
+also deterministic: every internal identifier is derived from the object's
+path, so rebuilding an unchanged spec produces identical files and a git
+diff shows only real model changes. Both Claude Code skills gate on the
+check first and on tmdl-preflight second.
+
 The deliverable is a spec, not a report
 ----------------------------------------
 
 The generated report is intentionally **blank**, ``.platform`` plus
 ``definition.pbir``, no pages, no visuals, because the value is the model:
 tables, types, keys, relationships, and measures, the thing a data engineer
-actually needs. Presented as a star-schema diagram alongside the PBIP, it
-becomes the hand-off artifact. Give it to your data engineers to build the
+actually needs. Every build now also writes a hand-off pack: a
+machine-readable manifest of tables, keys, relationships and measure
+dependencies, and a generated ``SPEC.md`` with the data dictionary and a
+star-schema diagram. Because both are generated from the spec, they can
+never drift from the model they describe. Give it to your data engineers to build the
 warehouse to exactly that shape, or hand it to a data-engineering skill and
 have the pipeline generated the same way. The domain expert defines *what the
 business needs to measure*; the plumbing follows.
@@ -91,12 +135,16 @@ Project links
 
 - `pbip-model-forge repository on GitHub
   <https://github.com/c-kapsalis/pbip-model-forge>`_: the two Claude Code
-  skills, the byte-exact entered-data encoder, the builder, and the docs (the
-  vision, the will-it-open artifact checklist, and the entered-data encoding
-  guide).
+  skills, the byte-exact entered-data encoder, the builder, the
+  ``pbip-forge check`` self-check, and the `1.1.0 release
+  <https://github.com/C-Kapsalis/pbip-model-forge/releases/tag/v1.1.0>`_.
+- `Check rule catalog
+  <https://pbip-model-forge-documentation.readthedocs.io/en/latest/reference/check-rules.html>`_:
+  every rule, its severity in each profile, why it exists, and how to fix it.
 - `Documentation site
   <https://pbip-model-forge-documentation.readthedocs.io/en/latest/index.html>`_:
   the published docs, on Read the Docs.
 
-*Python 3.9 or later, standard library only to build a model; requires the
-tmdl-preflight validator, installed separately; MIT license.*
+*Python 3.9 or later, standard library only to build a model; 59 passing
+tests; requires the tmdl-preflight validator, installed separately from
+GitHub; MIT license.*
