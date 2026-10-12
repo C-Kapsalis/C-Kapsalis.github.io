@@ -66,5 +66,17 @@ def _write_old_url_redirects(app, exception):
         shutil.copytree(out / "_downloads", old / "_downloads", dirs_exist_ok=True)
 
 
+# Google Search Console ownership (HTML tag method), on every page.
+GOOGLE_SITE_VERIFICATION = "vw_0BeUanpg7IqBop3_lYu5jjRJ4iEb770lZWUv5XIY"
+
+
+def _add_site_verification(app, pagename, templatename, context, doctree):
+    context["metatags"] = context.get("metatags", "") + (
+        f'\n<meta name="google-site-verification" '
+        f'content="{GOOGLE_SITE_VERIFICATION}" />'
+    )
+
+
 def setup(app):
+    app.connect("html-page-context", _add_site_verification)
     app.connect("build-finished", _write_old_url_redirects)
