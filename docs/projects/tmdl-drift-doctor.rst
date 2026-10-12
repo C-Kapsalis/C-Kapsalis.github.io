@@ -18,7 +18,7 @@ baseline of the template, ``detect`` typed drift findings per model, and
 dry-runnable, and recorded in an append-only audit ledger.
 
 I built it as an open-source Python package (CLI, parser, safe
-text-surgery engine, 60 tests over a fictional gym-chain fleet), and its
+text-surgery engine, 130 tests over a fictional gym-chain fleet), and its
 documentation is not an appendix to the tool. Before release the suite
 was also exercised against a production-scale fleet, a 108-table,
 614-measure template with three derived client models and roughly 780
@@ -57,6 +57,39 @@ stale-baseline failure mode became a guard that refuses to run rather
 than a warning. If the reasoning cannot be written cleanly, the behavior
 is usually wrong.
 
+What 1.1.0 added: governing the fleet, not just syncing it
+----------------------------------------------------------
+
+The first release could detect drift and push the template back out. Version
+1.1.0 is about what makes that safe to run every week.
+
+- **Deletions that cannot break a model.** Relationships are now first-class
+  drift, matched on the columns they join rather than on generated IDs, so
+  Power BI re-saves never count as changes. Retiring a table or column now
+  sweeps the relationships that point at it, and *refuses* while a client's
+  own measures, relationships, sort orders or hierarchies still depend on it.
+  A refused deletion becomes an item for a human, never a broken model.
+- **Moved, not duplicated.** A measure living on a different table in a
+  client model is now recognized as the same measure and moved verbatim,
+  instead of being inserted a second time under the same name.
+- **Declared divergence.** A client that is *meant* to differ gets an
+  override in the fleet file with a required reason, an owner and a date.
+  Overridden items are never remediated, and every one is printed as an
+  acknowledgement, so a suppression can never become invisible.
+- **Debt may shrink but never grow.** ``ratchet`` keeps per-model floors that
+  only tighten, so a fleet with a backlog can adopt a CI gate on day one.
+  A retired object coming back is never floorable: it fails as a
+  resurrection, not as a number that quietly went up.
+- **Proof that fixes stuck.** ``audit`` re-checks every fix recorded in the
+  ledger and fails when one has been reverted by a merge, and ``review``
+  writes everything the rules route to a human into one checklist. The
+  doctrine printed at its top is the one I care most about: anything that
+  recurs there is a missing rule.
+
+The documentation followed the same discipline: every new drift kind got its
+"do not cascade blindly when" note in the catalog, and the CI how-to was
+rewritten around the ratchet, the audit and the review queue.
+
 - **Stack:** Python, Click, pytest; documentation organized with
   Diátaxis
 - **Docs:** index, one tutorial, two how-to guides, two reference pages,
@@ -66,13 +99,13 @@ Project links
 -------------
 
 - `tmdl-drift-doctor repository on GitHub
-  <https://github.com/c-kapsalis/tmdl-drift-doctor>`_: source code, full
-  documentation, release notes, and a runnable example fleet (a
-  fictional gym chain) under ``examples/``.
+  <https://github.com/c-kapsalis/tmdl-drift-doctor>`_: source code, release
+  notes, and a runnable example fleet (a
+  fictional gym chain) under ``examples/``, plus the `v1.1.0 release
+  <https://github.com/C-Kapsalis/tmdl-drift-doctor/releases/tag/v1.1.0>`_.
 - `Documentation site
   <https://tmdl-drift-doctor-documentation.readthedocs.io/en/latest/>`_:
   the published docs, on Read the Docs.
 
-The repository ships the project's complete documentation set (``docs/``
-plus release notes); this page introduces the project, not the docs
-themselves.
+The documentation lives in its own repository and is published on Read
+the Docs; this page introduces the project, not the docs themselves.
