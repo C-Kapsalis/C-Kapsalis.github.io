@@ -15,6 +15,31 @@ funnel engine and a brand strategy engine, sit on top and train the same
 diagnostic thinking a case interview tests for. No AI, no backend, no
 accounts, no tracking; the whole thing is static and runs client-side.
 
+Why I built it
+-------------------------------------------------------------
+
+I chose to study marketing at Syracuse University's Whitman School of
+Management because of its emphasis on product management and marketing
+analytics, the two disciplines that frame Cohortica's playbooks. That
+training changed how I saw my own work. Looking at documentation as a
+product manager would, I realized how far technical communication still had
+to go in the companies I had worked for: it was treated as an afterthought
+to shipping, not as part of what was shipped.
+
+That realization is why I am joining Canonical: to learn from the teams that
+set the standards in this field, and to make the case that documentation is
+a product feature. Open source makes software available; documentation is
+what makes that availability usable. For an open-source data solution, the
+readers are different teams: data engineers, data-platform operators, data
+analysts and scientists, and compliance teams. Each one has to adopt the
+software, use it in the way that gets the most value from it, troubleshoot
+it, and extend or adjust it to fit their own stack. Serving all of them does
+not mean writing separate descriptions of the same product. It means giving
+each team its own path through one governed body of knowledge. Cohortica is
+a small, self-contained exercise in exactly that: one fixed structure,
+written once, that readers from twelve disciplines can each find their way
+through.
+
 Why this is a documentation project, not just a product
 -------------------------------------------------------------
 
