@@ -104,6 +104,47 @@ exactly one place and have every audience-specific page link back to it rather
 than restate it, so a reader's path can diverge in register but never in
 substance.
 
+Markup is part of the meaning
+-------------------------------------------------------------
+
+What a reader sees is only half of a page. The other half is what the markup
+says each element *is*: a link that moves you within the page or one that
+takes you somewhere else, a word that names a button or one that is just
+prose. Readers notice that half without knowing it, and so do screen readers,
+search, and the tooling that has to maintain the docs later. When the markup
+tells the truth, the page holds together. When it borrows whatever happens to
+look right, it quietly lies.
+
+That is how I approached a "Get help" section for
+:ref:`Ulwazi <oss-ulwazi>`, Canonical's documentation theme. The obvious move
+was to copy the styling of the "On this page" list next to it, but those
+links navigate within the page and these leave it. So I chose components for
+what they mean, not how they look, and built the section so its heading
+*is* the theme's own section caption rather than a copy of it. The same rule
+applies at the level of a single word. In the
+:ref:`Launchpad manual <oss-launchpad>` I marked up an interface label only
+where the reader is being sent to that control, not every time a field is
+mentioned. And in the :ref:`robotics documentation <oss-robotics>`, I gave
+cross-reference labels endings that say what role the page plays for a reader,
+and no ending where there was no distinction to make.
+
+A page is a set of claims about the product
+-------------------------------------------------------------
+
+Every instruction in a how-to guide is a claim: this field exists, this
+button is here, this step comes next. Products move on and the claims go
+stale without anyone noticing, so before I edit a page I check it against the
+real thing. Asked only to reformat Launchpad's project-registration guide, I
+registered a project first and found the guide described a flow that no
+longer existed. Formatting it neatly would have made wrong instructions look
+more trustworthy. Instead I documented the current flow and told the
+reviewer plainly which of my edits went beyond the brief. Mentorship from
+Canonical's technical authors through the Open Documentation Academy
+sharpened the other side of this. Keep each change to its stated purpose.
+Don't describe the interface in ways that will break when it changes, such as
+"the menu on the right". And give each admonition the weight its message
+actually carries.
+
 Documentation is a product
 -------------------------------------------------------------
 
