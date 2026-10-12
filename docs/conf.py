@@ -77,6 +77,22 @@ def _add_site_verification(app, pagename, templatename, context, doctree):
     )
 
 
+# Google Analytics 4 (gtag.js), in the <head> of every page.
+GA4_MEASUREMENT_ID = "G-YP0MFY3YTG"
+
+
+def _add_ga4(app, pagename, templatename, context, doctree):
+    context["metatags"] = context.get("metatags", "") + f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', '{GA4_MEASUREMENT_ID}');
+</script>"""
+
+
 def setup(app):
     app.connect("html-page-context", _add_site_verification)
+    app.connect("html-page-context", _add_ga4)
     app.connect("build-finished", _write_old_url_redirects)
