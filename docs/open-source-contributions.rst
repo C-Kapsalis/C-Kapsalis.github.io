@@ -22,10 +22,10 @@ production documentation, with an experienced author reviewing every change.
      - Merged, October 2026
    * - :ref:`Robotics documentation <oss-robotics>`
      - Homepage descriptions and a cross-reference naming scheme
-     - Merged
+     - Merged, August 2026
    * - :ref:`Diátaxis <oss-diataxis>`
      - Documentation typo fix
-     - Merged
+     - Merged, July 2026
 
 Canonical Open Documentation Academy
 ------------------------------------
