@@ -45,18 +45,43 @@ surface, not to a template. Two documents and a README cover the whole
 tool; nothing is written twice, and nothing is split into its own page
 just because a bigger project would have split it.
 
+What 1.1.0 added
+----------------
+
+Version 1.1.0 fixed the tool's most important promise and added a second job.
+
+- **It only touches what it owns.** Earlier versions rebuilt every chart's
+  formatting arrays from scratch, so a hand-picked column color or a hidden
+  legend series disappeared on the next run. The styler now rewrites only the
+  per-measure entries it is responsible for and keeps everything else byte
+  for byte. Colors are also tied to each measure's position in the field
+  parameter, so adding a metric no longer repaints the others, and they can
+  come from the report theme instead of hard-coded hex values.
+- **It checks the report, not just the styling.** A new read-only ``check``
+  command finds the defects that let a report save cleanly and then fail:
+  visuals and bookmarks bound to measures that no longer exist, bookmark
+  options that the Power BI service rejects on import, bookmarks pointing at
+  missing pages or visuals, and overlapping field-parameter slots. Each
+  finding has a stable id, so the reference can say exactly what each one
+  means and how to fix it, and a baseline lets a team adopt the check on a
+  report that already has known findings.
+
+The documentation grew with it, but in place: the new command and every
+check id went into the one CLI reference page and the tutorial, rather than
+into new pages a two-command tool does not need.
+
 Project links
 -------------
 
 - `pbi-plot-styler repository on GitHub
-  <https://github.com/c-kapsalis/pbi-plot-styler>`_: source code, full
-  documentation, and release notes.
+  <https://github.com/c-kapsalis/pbi-plot-styler>`_: source code, release
+  notes, and the `v1.1.0 release
+  <https://github.com/C-Kapsalis/pbi-plot-styler/releases/tag/v1.1.0>`_.
 - `Documentation site
-  <https://app.readthedocs.org/projects/pbi-plot-styler-documentation/>`_:
+  <https://pbi-plot-styler-documentation.readthedocs.io/en/latest/>`_:
   the published docs, on Read the Docs.
 
-The repository ships the project's full documentation set (``docs/`` plus
-release notes), organized with Diátaxis; this page introduces the
-project, not the docs themselves.
+The documentation lives in its own repository and is published on Read
+the Docs; this page introduces the project, not the docs themselves.
 
-*Python ≥ 3.10; 30 passing tests; MIT license.*
+*Python ≥ 3.10; 93 passing tests; MIT license.*
