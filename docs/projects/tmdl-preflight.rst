@@ -3,7 +3,7 @@ tmdl-preflight
 ==============
 
 **An open-source testing and auto-fix suite for Power BI semantic models
-saved as text (TMDL/PBIP).** I built the tool in Python (21 rules, five
+saved as text (TMDL/PBIP).** I built the tool in Python (37 rules, ten
 safe auto-fixers, a CLI, and a pytest plugin) and gave it a documentation
 set built just as deliberately: a tutorial, two how-to guides, and a
 two-part reference, sized to what a three-command tool actually needs
@@ -48,14 +48,50 @@ single-purpose CLI needs rather than a full four-quadrant traversal:
   the check-fix-re-check loop in a second.
 
 That second reference page carries the argument most CLI docs leave out
-entirely: not just what each rule checks, but why only five of the
-twenty-one rules earn an auto-fixer, and why the other sixteen are
-correctly left to a human. A repair earns a fixer only if the failure
+entirely: not just what each rule checks, but why only ten of the
+thirty-seven rules earn an auto-fixer, and why the rest are correctly
+left to a human. A repair earns a fixer only if the failure
 mode fully determines the correct repair, it never overwrites
 human-authored semantics, it is idempotent, and it is a minimal,
 line-level edit. An unbalanced DAX expression, for instance, has
 infinitely many valid completions, so no fixer can guess which one the
 author meant.
+
+What 1.1.0 added
+----------------
+
+The first release caught the defects that stop a project from opening.
+Version 1.1.0 goes after the ones that let a model open and then fail
+somewhere less convenient: in deployment, on refresh, or in front of a
+user.
+
+- **Sixteen new rules.** Among them: DAX references to tables or columns
+  that no longer exist (the model imports, then every visual breaks), more
+  than one active relationship between the same two tables, a ``VAR``
+  declared twice in one scope, TMDL property lines that a script or merge
+  dropped inside an expression, ``///`` descriptions left dangling before a
+  blank line, field-parameter rows with a missing or extra comma (the table
+  silently loads nothing), and bookmark options the Power BI service rejects
+  on import.
+- **Fixers that prove their own edits.** Every auto-fix now edits only the
+  lines it means to, keeps the file's line endings and byte-order mark, and
+  refuses to write unless re-parsing shows the intended change and nothing
+  else.
+- **Adoption on real, imperfect models.** A configuration file, exemptions
+  that require a written reason and can expire, and a baseline that fails
+  only on *new* violations, so a team can turn the gate on for a legacy
+  model on day one. Import-blocking rules can never be baselined: some
+  defects are not debt, they are outages.
+- **CI-native output.** SARIF for GitHub code scanning, inline GitHub
+  annotations, a Markdown summary, a pre-commit hook, and a ``stats``
+  command that inventories a model without inventing thresholds nobody can
+  justify.
+
+The documentation gained the pages a configurable tool needs and a
+single-purpose one did not: a configuration and baseline reference, and a
+how-to for running the check in CI. The rule catalog grew with every new
+rule's what, why, severity and fix, and the reference no longer says
+"there is no config file in this release."
 
 What I'd point a reviewer at
 ----------------------------
@@ -75,16 +111,16 @@ Project links
 -------------
 
 - `tmdl-preflight repository on GitHub
-  <https://github.com/c-kapsalis/tmdl-preflight>`_: source code, full
-  documentation, release notes, and runnable bike-shop example models
-  (one clean, one deliberately broken) under ``examples/``.
+  <https://github.com/c-kapsalis/tmdl-preflight>`_: source code, release
+  notes, runnable bike-shop example models (one clean, one deliberately
+  broken) under ``examples/``, and the `1.1.0 release
+  <https://github.com/C-Kapsalis/tmdl-preflight/releases/tag/v1.1.0>`_.
 - `Documentation site
   <https://tmdl-preflight-documentation.readthedocs.io/en/latest/index.html>`_:
   the published docs, on Read the Docs.
 
-The repository ships the project's complete documentation set (``docs/``
-plus release notes); this page introduces the project, not the docs
-themselves.
+The documentation lives in its own repository and is published on Read
+the Docs; this page introduces the project, not the docs themselves.
 
-*Python 3.10 or later, standard library only; 125 passing tests; MIT
+*Python 3.10 or later, standard library only; 284 passing tests; MIT
 license.*
