@@ -8,8 +8,10 @@ machine-learning products** — I write about the kind of software I came up
 building and using. My background is an unusual blend of three degrees, and
 each left me with something I use every day: a BSc in Economics (Athens
 University of Economics and Business), an MSc in Data Science (American
-College of Greece), and an MSc in Marketing (Syracuse University, as a
-Fulbright scholar and Beta Gamma Sigma inductee).
+College of Greece; `projects from that degree
+<https://c-kapsalis.github.io/ms-data-science-projects/>`_), and an MSc in
+Marketing (Syracuse University, as a Fulbright scholar and Beta Gamma Sigma
+inductee).
 
 Economics taught me to approach a problem whole, in a structured way. Data
 science taught me to read, test and reason about code, and to speak with the

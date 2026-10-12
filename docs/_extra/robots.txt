@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://c-kapsalis.github.io/sitemap.xml

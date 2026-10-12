@@ -19,7 +19,7 @@ production documentation, with an experienced author reviewing every change.
      - Merged, October 2026
    * - :ref:`Launchpad manual <oss-launchpad>`
      - Reworked the "Register your project" guide
-     - Approved
+     - Merged, October 2026
    * - :ref:`Robotics documentation <oss-robotics>`
      - Homepage descriptions and a cross-reference naming scheme
      - Merged
