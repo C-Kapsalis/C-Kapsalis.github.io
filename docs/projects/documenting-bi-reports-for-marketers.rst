@@ -129,8 +129,8 @@ Project links
   running in the browser.
 - `Tutorial <https://bi-report-template-site.vercel.app/tutorial>`_: the
   blank-start walkthrough, at the same site.
-- `report-template-site repository on GitHub
-  <https://github.com/c-kapsalis/report-template-site>`_: source code, full
+- `BI-report-template-site repository on GitHub
+  <https://github.com/C-Kapsalis/BI-report-template-site>`_: source code, full
   documentation, and release notes.
 - `Documentation site
   <https://bi-report-template-site-documentation.readthedocs.io/en/latest/index.html>`_:
