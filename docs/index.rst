@@ -39,6 +39,7 @@ Explore the portfolio
    CLI tools <cli-tools>
    AI skills/plugins <ai-skills>
    presentations
+   BI communications <projects/documenting-bi-reports-for-marketers>
 
 .. toctree::
    :hidden:

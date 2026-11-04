@@ -1,5 +1,3 @@
-:orphan:
-
 Documenting BI reports for marketers
 ====================================
 
