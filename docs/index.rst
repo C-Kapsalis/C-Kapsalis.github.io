@@ -15,12 +15,14 @@ command-line tools for Power BI; and an editorial review product.
 Explore the portfolio
 ---------------------
 
-- CLI tools: four tools for Power BI semantic models and reports.
-- AI Skills/Plugins: Devil's Analyst, Second Read, Swift-PBI, and Value Pricing.
-- SaaS: Second Read Studio, an editorial review workspace in beta.
-- Open-source contributions: upstream documentation contributions and
-  independent projects.
-- CV: work history and a downloadable PDF.
+- :doc:`Open-source contributions <open-source-contributions>`: work through
+  Canonical's Open Documentation Academy.
+- :doc:`SaaS and product work <saas>`: Second Read Studio.
+- :doc:`CLI tools <cli-tools>`: four tools for Power BI semantic models and reports.
+- :doc:`AI skills/plugins <ai-skills>`: Devil's Analyst, Second Read, Swift-PBI,
+  and Value Pricing.
+- :doc:`Presentations <presentations>`: talks and slides.
+- :doc:`CV <experience>`: work history and a downloadable PDF.
 
 ----
 
@@ -30,32 +32,13 @@ Explore the portfolio
 
 .. toctree::
    :hidden:
+   :caption: Portfolio
 
-   CLI tools <cli-tools>
-   AI Skills/Plugins <ai-skills>
-   SaaS <saas>
    open-source-contributions
-
-.. toctree::
-   :hidden:
-   :caption: Writing and projects
-
+   SaaS and product work <saas>
+   CLI tools <cli-tools>
+   AI skills/plugins <ai-skills>
    presentations
-   blog-posts
-   projects/documenting-bi-reports-for-marketers
-   projects/tmdl-preflight
-   projects/pbi-plot-styler
-   projects/tmdl-drift-doctor
-   projects/pbip-model-forge
-   projects/cohortica
-
-.. toctree::
-   :hidden:
-   :caption: About
-
-   about
-   approach
-   open-source
 
 .. toctree::
    :hidden:
@@ -64,3 +47,11 @@ Explore the portfolio
    experience
    education
    skills
+
+.. toctree::
+   :hidden:
+   :caption: About
+
+   about
+   approach
+   open-source

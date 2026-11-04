@@ -134,11 +134,3 @@ A small fix to the documentation of the Diátaxis framework itself, the very
 framework I use to structure my own documentation. Modest in size, but it
 took me through the project's contribution workflow end to end and, more
 usefully, made me read the source material closely.
-
-Up next
--------
-
-Documentation and internationalization contributions to
-`Data Formulator <https://github.com/microsoft/data-formulator>`__,
-`Flint <https://github.com/microsoft/flint-chart>`__, and
-`JASP <https://jasp-stats.org/>`__.
