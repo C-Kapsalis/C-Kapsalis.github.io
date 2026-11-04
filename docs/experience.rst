@@ -3,9 +3,9 @@ Experience
 
 :download:`Download my full CV (PDF) <files/Kapsalis_Christoforos_CV.pdf>`
 
-**Technical Author (incoming)**, Canonical, Charm Engineering (*starting 9 Nov 2026*)
+**Technical Author**, Canonical, Charm Engineering (*Nov 2026 - Present*)
 
-Joining Canonical's Charm Engineering team as a Technical Author.
+Technical Author in Canonical's Charm Engineering team.
 
 **Shopify App - Product and Marketing**, Maya Insights (*Nov 2026 - Present*)
 
