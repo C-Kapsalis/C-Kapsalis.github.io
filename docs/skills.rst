@@ -1,6 +1,14 @@
 Skills
 ======
 
+AI skills and plugins
+---------------------
+
+I build open-source agent skills and plugin packages for marketing analysis,
+reader-first editing, Power BI model and report workflows, and value-based
+pricing. The AI skills and AI plugins pages in the site navigation give
+project summaries, installation guidance, and source links.
+
 Domain expertise
 ----------------
 

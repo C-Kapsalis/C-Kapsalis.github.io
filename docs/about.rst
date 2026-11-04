@@ -19,6 +19,11 @@ engineers who write it. Marketing taught me to start from the reader: to work
 out what someone actually needs before writing a word. Documentation is where
 all three finally do the same job.
 
+From **9 November 2026**, I join Canonical's **Charm Engineering** team as a
+Technical Author. At Maya Insights, my full-time Marketing Engineer role ends
+in November 2026, and I continue on a contract basis with its Shopify app,
+working across product and marketing.
+
 Domain expertise
 ----------------
 

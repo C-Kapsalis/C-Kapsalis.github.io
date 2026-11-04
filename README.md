@@ -1,25 +1,21 @@
-# Technical-writing portfolio
+# Christoforos Kapsalis - personal website
 
-Source for my technical-writing portfolio, written in reStructuredText, built
-with [Sphinx](https://www.sphinx-doc.org/) + [Furo](https://pradyunsg.me/furo/),
-and deployed free to GitHub Pages via GitHub Actions.
+This repository contains the source for my personal website,
+https://c-kapsalis.github.io/, built with Sphinx and Furo. GitHub Actions
+builds and deploys the site from the main branch using
+.github/workflows/docs.yml.
 
 ## Build locally
 
-```console
-pip install -r requirements.txt
-make serve   # builds and serves at http://localhost:8000
-```
+Install the packages listed in requirements.txt, then run:
 
-## Publish (free)
+    make html
+    make serve
 
-1. Create a **new** public repo named `writing-portfolio` (any name works;
-   it becomes part of the URL).
-2. Push this project to it.
-3. Repo **Settings -> Pages -> Build and deployment -> Source: GitHub Actions**.
-4. Every push to `main` rebuilds and republishes automatically.
+The built site is written to docs/_build/html/; the local server listens on
+port 8000.
 
-The site is served at `https://c-kapsalis.github.io/writing-portfolio/`,
-sitting alongside the existing `c-kapsalis.github.io` user site without
-conflict. (Sphinx uses relative links, so the subpath works with no config
-change.)
+## Publish
+
+Push to main or run the Deploy portfolio workflow manually. The workflow
+builds the Sphinx documentation and deploys it to GitHub Pages.
