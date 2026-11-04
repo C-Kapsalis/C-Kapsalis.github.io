@@ -16,8 +16,7 @@ Explore the portfolio
 ---------------------
 
 - CLI tools: four tools for Power BI semantic models and reports.
-- AI skills: Devil's Analyst, Second Read, Swift PBI, and Value Pricing.
-- AI plugins: installable agent packages and platform guidance.
+- AI Skills/Plugins: Devil's Analyst, Second Read, Swift-PBI, and Value Pricing.
 - SaaS: Second Read Studio, an editorial review workspace in beta.
 - Open-source contributions: upstream documentation contributions and
   independent projects.
@@ -31,32 +30,10 @@ Explore the portfolio
 
 .. toctree::
    :hidden:
-   :caption: CLI tools
 
-   cli-tools
-
-.. toctree::
-   :hidden:
-   :caption: AI skills
-
-   ai-skills
-
-.. toctree::
-   :hidden:
-   :caption: AI plugins
-
-   ai-plugins
-
-.. toctree::
-   :hidden:
-   :caption: SaaS
-
-   saas
-
-.. toctree::
-   :hidden:
-   :caption: Open-source contributions
-
+   CLI tools <cli-tools>
+   AI Skills/Plugins <ai-skills>
+   SaaS <saas>
    open-source-contributions
 
 .. toctree::

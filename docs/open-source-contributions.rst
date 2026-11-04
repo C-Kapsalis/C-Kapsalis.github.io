@@ -10,13 +10,13 @@ production documentation, with an experienced author reviewing every change.
 Independent projects
 --------------------
 
-My open-source projects include four AI skill suites: Devil's Analyst
-(https://github.com/C-Kapsalis/devils-analyst), Second Read
-(https://github.com/C-Kapsalis/second-read), Swift PBI
-(https://github.com/C-Kapsalis/swift-pbi), and Value Pricing
+My open-source projects include the Devil's Analyst plugin
+(https://github.com/C-Kapsalis/devils-analyst), the Second Read skill
+(https://github.com/C-Kapsalis/second-read), the Swift-PBI plugin
+(https://github.com/C-Kapsalis/swift-pbi), and the Value Pricing skill
 (https://github.com/C-Kapsalis/value-pricing), plus four Power BI
-command-line tools. The AI skills and CLI tools pages in the navigation give
-more detail.
+command-line tools. The :doc:`AI Skills/Plugins <ai-skills>` and
+:doc:`CLI tools <cli-tools>` pages give more detail.
 
 I also submitted these projects to the Awesome OpenCode directory
 (https://github.com/awesome-opencode/awesome-opencode). All four submissions
@@ -26,7 +26,7 @@ Devil's Analyst #986
 (https://github.com/awesome-opencode/awesome-opencode/pull/986),
 Second Read #987
 (https://github.com/awesome-opencode/awesome-opencode/pull/987),
-Swift PBI #988
+Swift-PBI #988
 (https://github.com/awesome-opencode/awesome-opencode/pull/988), and
 Value Pricing #989
 (https://github.com/awesome-opencode/awesome-opencode/pull/989). The pull

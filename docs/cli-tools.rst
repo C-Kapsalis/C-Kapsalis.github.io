@@ -40,5 +40,5 @@ consistent.
 - Documentation: https://pbi-plot-styler-documentation.readthedocs.io/en/latest/
 - Source and guide: https://github.com/C-Kapsalis/pbi-plot-styler
 
-These tools also support the Swift PBI agent skills. Their example models and
+These tools also support the Swift-PBI plugin. Their example models and
 outputs use fictional data.

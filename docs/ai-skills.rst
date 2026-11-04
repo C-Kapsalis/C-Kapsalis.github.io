@@ -1,16 +1,16 @@
-AI skills
-==========
+AI Skills/Plugins
+=================
 
-Open-source instructions that give AI agents a repeatable method for a specific
-kind of work. Each project repository includes its README, installation notes,
-and source. Where a standalone documentation site is available, it is linked
+Open-source skills and plugins that give AI agents a repeatable method for a
+specific kind of work. Each project repository includes its README,
+installation notes, and source. Where a standalone documentation site is available, it is linked
 below.
 
-Devil's Analyst
----------------
+Devil's Analyst (plugin)
+------------------------
 
-A set of marketing and analytics skills that checks evidence, tests
-interpretations, and routes questions to data the team can access.
+A marketing and analytics plugin with skills that check evidence, test
+interpretations, and route questions to data the team can access.
 
 - Repository and README: https://github.com/C-Kapsalis/devils-analyst
 - Documentation project: https://github.com/C-Kapsalis/devils-analyst-documentation
@@ -25,10 +25,10 @@ accept.
 - Documentation: https://second-read-docs.readthedocs.io/en/latest/
 - Source and installation guide: https://github.com/C-Kapsalis/second-read
 
-Swift PBI
----------
+Swift-PBI (plugin)
+------------------
 
-A Power BI skill suite for semantic-model prototyping, TMDL checks, template
+A Power BI plugin with skills for semantic-model prototyping, TMDL checks, template
 drift reviews, and report styling. The skills can call the companion CLI tools
 when a local shell is available.
 
