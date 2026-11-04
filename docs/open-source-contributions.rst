@@ -7,31 +7,6 @@ where Canonical's technical authors mentor newcomers through real
 documentation issues. I used it to learn and practise the craft on
 production documentation, with an experienced author reviewing every change.
 
-Independent projects
---------------------
-
-My open-source projects include the Devil's Analyst plugin
-(https://github.com/C-Kapsalis/devils-analyst), the Second Read skill
-(https://github.com/C-Kapsalis/second-read), the Swift-PBI plugin
-(https://github.com/C-Kapsalis/swift-pbi), and the Value Pricing skill
-(https://github.com/C-Kapsalis/value-pricing), plus four Power BI
-command-line tools. The :doc:`AI Skills/Plugins <ai-skills>` and
-:doc:`CLI tools <cli-tools>` pages give more detail.
-
-I also submitted these projects to the Awesome OpenCode directory
-(https://github.com/awesome-opencode/awesome-opencode). All four submissions
-were closed without merge by maintainers on 1 November 2026 under the
-directory's then-current entry requirements:
-Devil's Analyst #986
-(https://github.com/awesome-opencode/awesome-opencode/pull/986),
-Second Read #987
-(https://github.com/awesome-opencode/awesome-opencode/pull/987),
-Swift-PBI #988
-(https://github.com/awesome-opencode/awesome-opencode/pull/988), and
-Value Pricing #989
-(https://github.com/awesome-opencode/awesome-opencode/pull/989). The pull
-requests include the maintainers' review notes.
-
 .. list-table::
    :header-rows: 1
    :widths: 30 45 25
