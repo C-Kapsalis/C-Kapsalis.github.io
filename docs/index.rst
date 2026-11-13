@@ -21,6 +21,8 @@ Explore the portfolio
 - :doc:`CLI tools <cli-tools>`: four tools for Power BI semantic models and reports.
 - :doc:`AI skills/plugins <ai-skills>`: Devil's Analyst, Second Read, Swift-PBI,
   and Value Pricing.
+- :doc:`Writing and publications <writing-and-publications>`: articles on
+  documentation, marketing strategy, and product strategy.
 - :doc:`Presentations <presentations>`: talks and slides.
 - :doc:`CV <experience>`: work history and a downloadable PDF.
 
@@ -38,6 +40,7 @@ Explore the portfolio
    SaaS and product work <saas>
    CLI tools <cli-tools>
    AI skills/plugins <ai-skills>
+   writing-and-publications
    presentations
    BI communications <projects/documenting-bi-reports-for-marketers>
 
